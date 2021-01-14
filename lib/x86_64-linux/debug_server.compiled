@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1603540176"/>
+  <Params Value=" -Px86_64 -CpATHLON64 -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fi/home/bc/src/sandbox/debug_server/lib/x86_64-linux -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux/qt -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux -Fu/usr/lib64/lazarus/components/lazutils/lib/x86_64-linux -Fu/usr/lib64/lazarus/packager/units/x86_64-linux -Fu/home/bc/src/sandbox/debug_server/ -FU/home/bc/src/sandbox/debug_server/lib/x86_64-linux/ -FE/home/bc/src/sandbox/debug_server/ -o/home/bc/src/sandbox/debug_server/debug_server -dLCL -dLCLqt debug_server.lpr"/>
+</CONFIG>
