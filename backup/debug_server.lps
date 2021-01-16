@@ -3,15 +3,14 @@
   <ProjectSession>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="4">
+    <Units Count="8">
       <Unit0>
         <Filename Value="debug_server.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="34"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="60" Y="11"/>
+        <UsageCount Value="72"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="lfm_main.pas"/>
@@ -19,46 +18,188 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <CursorPos X="12" Y="10"/>
-        <UsageCount Value="34"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="103"/>
+        <CursorPos X="3" Y="113"/>
+        <UsageCount Value="72"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="debug_srv.pas"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="88"/>
-        <CursorPos X="35" Y="97"/>
-        <UsageCount Value="11"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="160"/>
+        <CursorPos Y="167"/>
+        <UsageCount Value="30"/>
+        <Bookmarks Count="1">
+          <Item0 X="46" Y="171"/>
+        </Bookmarks>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="../../bc_rtl/synapse/source/demo/echo/echo.pas"/>
         <UnitName Value="Echo"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="54"/>
-        <CursorPos Y="56"/>
-        <UsageCount Value="11"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="31"/>
+        <CursorPos X="27" Y="23"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit3>
+      <Unit4>
+        <Filename Value="/usr/lib64/lazarus/lcl/include/wincontrol.inc"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="6501"/>
+        <CursorPos Y="6510"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../bc_rtl/synapse/source/lib/blcksock.pas"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="3720"/>
+        <CursorPos Y="3727"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/usr/lib64/lazarus/lcl/interfaces/qt/qtwidgets.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="5738"/>
+        <CursorPos X="39" Y="5748"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../bc_rtl/synapse/source/demo/echo/main.pas"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="50" Y="8"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
     </Units>
-    <JumpHistory Count="4" HistoryIndex="3">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="lfm_main.pas"/>
+        <Filename Value="../../bc_rtl/synapse/source/lib/blcksock.pas"/>
+        <Caret Line="3721" TopLine="3709"/>
       </Position1>
       <Position2>
-        <Filename Value="lfm_main.pas"/>
-        <Caret Line="51" Column="20" TopLine="43"/>
+        <Filename Value="../../bc_rtl/synapse/source/lib/blcksock.pas"/>
+        <Caret Line="3722" TopLine="3710"/>
       </Position2>
       <Position3>
-        <Filename Value="lfm_main.pas"/>
-        <Caret Line="46" Column="28" TopLine="37"/>
+        <Filename Value="../../bc_rtl/synapse/source/lib/blcksock.pas"/>
+        <Caret Line="3727" TopLine="3720"/>
       </Position3>
       <Position4>
         <Filename Value="debug_srv.pas"/>
-        <Caret Line="55" Column="15" TopLine="49"/>
+        <Caret Line="127" TopLine="117"/>
       </Position4>
+      <Position5>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="128" TopLine="117"/>
+      </Position5>
+      <Position6>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="129" TopLine="117"/>
+      </Position6>
+      <Position7>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="130" TopLine="118"/>
+      </Position7>
+      <Position8>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="131" TopLine="119"/>
+      </Position8>
+      <Position9>
+        <Filename Value="/usr/lib64/lazarus/lcl/interfaces/qt/qtwidgets.pas"/>
+        <Caret Line="5746" Column="74" TopLine="5738"/>
+      </Position9>
+      <Position10>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="131" TopLine="93"/>
+      </Position10>
+      <Position11>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="66" Column="77" TopLine="62"/>
+      </Position11>
+      <Position12>
+        <Filename Value="/usr/lib64/lazarus/lcl/include/wincontrol.inc"/>
+        <Caret Line="6508" TopLine="6500"/>
+      </Position12>
+      <Position13>
+        <Filename Value="/usr/lib64/lazarus/lcl/include/wincontrol.inc"/>
+        <Caret Line="7885" TopLine="7878"/>
+      </Position13>
+      <Position14>
+        <Filename Value="/usr/lib64/lazarus/lcl/include/wincontrol.inc"/>
+        <Caret Line="7902" TopLine="7896"/>
+      </Position14>
+      <Position15>
+        <Filename Value="/usr/lib64/lazarus/lcl/include/wincontrol.inc"/>
+        <Caret Line="6509" TopLine="6501"/>
+      </Position15>
+      <Position16>
+        <Filename Value="/usr/lib64/lazarus/lcl/include/wincontrol.inc"/>
+        <Caret Line="6510" TopLine="6501"/>
+      </Position16>
+      <Position17>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="67" TopLine="62"/>
+      </Position17>
+      <Position18>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="30" Column="27" TopLine="23"/>
+      </Position18>
+      <Position19>
+        <Filename Value="../../bc_rtl/synapse/source/demo/echo/main.pas"/>
+        <Caret Line="23" Column="18" TopLine="20"/>
+      </Position19>
+      <Position20>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="74" Column="3" TopLine="71"/>
+      </Position20>
+      <Position21>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="105" TopLine="100"/>
+      </Position21>
+      <Position22>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="131" TopLine="34"/>
+      </Position22>
+      <Position23>
+        <Filename Value="debug_srv.pas"/>
+      </Position23>
+      <Position24>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="10" Column="13" TopLine="4"/>
+      </Position24>
+      <Position25>
+        <Filename Value="lfm_main.pas"/>
+      </Position25>
+      <Position26>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="176" Column="33" TopLine="162"/>
+      </Position26>
+      <Position27>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="157" Column="73" TopLine="155"/>
+      </Position27>
+      <Position28>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="158" TopLine="155"/>
+      </Position28>
+      <Position29>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="157" TopLine="155"/>
+      </Position29>
+      <Position30>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="158" TopLine="155"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

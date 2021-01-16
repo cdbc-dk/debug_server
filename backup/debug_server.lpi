@@ -15,12 +15,14 @@
       <Icon Value="0"/>
     </General>
     <MacroValues Count="1">
-      <Macro1 Name="LCLWidgetType" Value="qt"/>
+      <Macro3 Name="LCLWidgetType" Value="gtk2"/>
     </MacroValues>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
-      <SharedMatrixOptions Count="1">
-        <Item1 ID="092906189034" Modes="Default" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt"/>
+      <SharedMatrixOptions Count="3">
+        <Item1 ID="092906189034" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt"/>
+        <Item2 ID="284750587104" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt5"/>
+        <Item3 ID="533094859509" Modes="Default" Type="IDEMacro" MacroName="LCLWidgetType" Value="gtk2"/>
       </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>
@@ -57,12 +59,9 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../../bc_rtl/synapse/source/lib"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <CodeGeneration>
-      <TargetProcessor Value="ATHLON64"/>
-      <TargetCPU Value="x86_64"/>
-    </CodeGeneration>
     <Linking>
       <Options>
         <Win32>

@@ -1,11 +1,11 @@
 
 {------------------------------------------------------------------------------|
 | Project name: Debug Server                                                   |
-| Unit name   : lfm_main.pas                                                   |
+| Unit name   : debug_srv.pas                                                  |
 | Copyright   : (c) 2021 cdbc.dk                                               |
 | Programmer  : Benny Christensen /bc                                          |
 | Created     : 2021.01.13 /bc initial design and coding                       |
-| Updated     : 2020.01.13 /bc Setting up environment, structure and vision    |
+| Updated     : 2021.01.13 /bc Setting up environment, structure and vision    |
 |                                                                              |
 |                                                                              |
 |                                                                              |
@@ -124,7 +124,7 @@ constructor TTCPDebugDaemon.Create(const aHandle: THandle);
 begin
   inherited create(true);
   fSock:=TTCPBlockSocket.create;  { this is the server socket, it only listens }
-  FreeOnTerminate:= true;                                 { when done, go away }
+//  FreeOnTerminate:= true;        { when done, we free and nil it in lfm_main }
   fAddress:= '0.0.0.0';                                        { listen to all }
   fPort:= '8723';                                                { port ~ 8723 }
   fHandle:= aHandle;                     { used for inter-thread communication }
@@ -146,6 +146,7 @@ procedure TTCPDebugDaemon.Execute;
 var
   ClientSock:TSocket;
 begin
+//  exit;
   with fSock do begin
     CreateSocket;
     SetLinger(true,10000);
@@ -157,7 +158,7 @@ begin
       if CanRead(1000) then begin
         ClientSock:= Accept;
         if LastError = 0 then begin
-          TTCPEchoThrd.Create(ClientSock,fHandle);
+          TTCPDebugThrd.Create(ClientSock,fHandle);
           PostMessage(fHandle,LM_ACCEPT,strtoint(fPort),longint(pchar('Worker thread created...')));
         end;
       end;

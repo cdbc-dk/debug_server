@@ -34,7 +34,7 @@ object frmMain: TfrmMain
       EditLabel.Width = 99
       EditLabel.Caption = 'Local Address:'
       EditLabel.ParentColor = False
-      Font.Color = clYellow
+      Font.Color = clBlue
       LabelPosition = lpLeft
       ParentFont = False
       TabOrder = 0
@@ -49,7 +49,7 @@ object frmMain: TfrmMain
       EditLabel.Width = 116
       EditLabel.Caption = 'Remote Address:'
       EditLabel.ParentColor = False
-      Font.Color = clYellow
+      Font.Color = clBlue
       LabelPosition = lpLeft
       ParentFont = False
       TabOrder = 1
@@ -64,7 +64,7 @@ object frmMain: TfrmMain
       EditLabel.Width = 34
       EditLabel.Caption = 'Port:'
       EditLabel.ParentColor = False
-      Font.Color = clYellow
+      Font.Color = clBlue
       LabelPosition = lpLeft
       ParentFont = False
       TabOrder = 2
@@ -73,7 +73,7 @@ object frmMain: TfrmMain
     object lblStatus: TLabel
       Left = 544
       Height = 17
-      Top = 7
+      Top = 9
       Width = 58
       Caption = 'Stopped'
       Font.Color = clRed
@@ -86,7 +86,7 @@ object frmMain: TfrmMain
       Top = 4
       Width = 75
       Caption = 'Start'
-      Font.Color = clYellow
+      Font.Color = clBlue
       OnClick = btnConnectClick
       ParentFont = False
       TabOrder = 3
@@ -99,6 +99,19 @@ object frmMain: TfrmMain
     Width = 729
     Align = alClient
     Caption = ' Data '
+    ClientHeight = 290
+    ClientWidth = 727
     TabOrder = 2
+    object Memo1: TMemo
+      Left = 33
+      Height = 234
+      Top = 28
+      Width = 647
+      Lines.Strings = (
+        'Memo1'
+      )
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+    end
   end
 end

@@ -3,12 +3,11 @@ program debug_server;
 {$mode objfpc}{$H+}
 
 uses
-  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  {$IFDEF UNIX}
   cthreads,
-  {$ENDIF}{$ENDIF}
+  {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, lfm_main
-  { you can add units after this };
+  Forms, lfm_main;
 
 {$R *.res}
 

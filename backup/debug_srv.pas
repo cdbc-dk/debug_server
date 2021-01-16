@@ -1,11 +1,11 @@
 
 {------------------------------------------------------------------------------|
 | Project name: Debug Server                                                   |
-| Unit name   : lfm_main.pas                                                   |
+| Unit name   : debug_srv.pas                                                  |
 | Copyright   : (c) 2021 cdbc.dk                                               |
 | Programmer  : Benny Christensen /bc                                          |
 | Created     : 2021.01.13 /bc initial design and coding                       |
-| Updated     : 2020.01.13 /bc Setting up environment, structure and vision    |
+| Updated     : 2021.01.13 /bc Setting up environment, structure and vision    |
 |                                                                              |
 |                                                                              |
 |                                                                              |
@@ -83,8 +83,28 @@ begin
 end;
 
 procedure TTCPDebugThrd.Execute;
+var S: string;
 begin
-
+  fSock:= TTCPBlockSocket.create;
+  try
+    fSock.Socket:= CSock;
+    fSock.GetSins;
+    with fSock do begin
+      repeat
+        if Terminated then break;
+        S:= RecvPacket(60000);
+        if LastError <> 0 then break;
+        PostMessage(fHandle,LM_WORKING,length(S),longint(pchar('Worker thread is running...')));
+        SendString(S); // here ææ
+        S:= 'Sent: '+S;
+//        PostMessage(fHandle,LM_WORKING,length(S),longint(pchar(S)));  //AV
+        if LastError <> 0 then break;
+      until false;
+    end;
+  finally
+    fSock.Free;
+  end;
+  PostMessage(fHandle,LM_WORKING,0,longint(pchar('Worker thread is Done.')));
 end;
 
 (*
@@ -104,7 +124,7 @@ constructor TTCPDebugDaemon.Create(const aHandle: THandle);
 begin
   inherited create(true);
   fSock:=TTCPBlockSocket.create;  { this is the server socket, it only listens }
-  FreeOnTerminate:= true;                                 { when done, go away }
+//  FreeOnTerminate:= true;                                 { when done, go away }
   fAddress:= '0.0.0.0';                                        { listen to all }
   fPort:= '8723';                                                { port ~ 8723 }
   fHandle:= aHandle;                     { used for inter-thread communication }
@@ -126,6 +146,7 @@ procedure TTCPDebugDaemon.Execute;
 var
   ClientSock:TSocket;
 begin
+//  exit;
   with fSock do begin
     CreateSocket;
     SetLinger(true,10000);
@@ -137,7 +158,7 @@ begin
       if CanRead(1000) then begin
         ClientSock:= Accept;
         if LastError = 0 then begin
-          TTCPEchoThrd.Create(ClientSock,fHandle);
+          TTCPDebugThrd.Create(ClientSock,fHandle);
           PostMessage(fHandle,LM_ACCEPT,strtoint(fPort),longint(pchar('Worker thread created...')));
         end;
       end;

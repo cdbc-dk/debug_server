@@ -6,7 +6,9 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, StdCtrls,
-  ExtCtrls;
+  ExtCtrls,
+  LMessages,
+  debug_srv;
 
 type
 
@@ -20,12 +22,20 @@ type
     edtRemoteAddress: TLabeledEdit;
     edtPort: TLabeledEdit;
     lblStatus: TLabel;
+    Memo1: TMemo;
     stbNotifications: TStatusBar;
     procedure btnConnectClick(Sender: TObject);
   private
-
+    fDebugDaemon: TTCPDebugDaemon;
+    procedure LMCreate(var Message: TLMessage); message LM_CREATE;
+    procedure LMListen(var Message: TLMessage); message LM_LISTEN;
+    procedure LMAccept(var Message: TLMessage); message LM_ACCEPT;
+    procedure LMWorking(var Message: TLMessage); message LM_WORKING;
+    procedure LMDone(var Message: TLMessage); message LM_DONE;
+    procedure LMDestroy(var Message: TLMessage); message LM_DESTROY;
   public
-
+    procedure StartServer;
+    procedure StopServer;
   end;
 
 var
@@ -46,7 +56,8 @@ begin
          lblStatus.Caption:= 'Running';
          btnConnect.Tag:= 1;
          stbNotifications.SimpleText:= 'Serving...';
-     //    StartServer(Handle);
+         Application.ProcessMessages;
+         StartServer;
        end;
     1: begin
          btnConnect.Caption:= 'Start';
@@ -54,9 +65,52 @@ begin
          lblStatus.Caption:= 'Stopped';
          btnConnect.Tag:= 0;
          stbNotifications.SimpleText:= 'Waiting...';
-      //   StopServer;
+         Application.ProcessMessages;
+         StopServer;
        end;
   end;
+end;
+
+procedure TfrmMain.LMCreate(var Message: TLMessage);
+begin
+  Memo1.Lines.Add(inttostr(Message.WParam)+': '+string(pchar(Message.LParam)));
+end;
+
+procedure TfrmMain.LMListen(var Message: TLMessage);
+begin
+  Memo1.Lines.Add(inttostr(Message.WParam)+': '+string(pchar(Message.LParam)));
+end;
+
+procedure TfrmMain.LMAccept(var Message: TLMessage);
+begin
+  Memo1.Lines.Add(inttostr(Message.WParam)+': '+string(pchar(Message.LParam)));
+end;
+
+procedure TfrmMain.LMWorking(var Message: TLMessage);
+begin
+  Memo1.Lines.Add(inttostr(Message.WParam)+': '+string(pchar(Message.LParam)));
+end;
+
+procedure TfrmMain.LMDone(var Message: TLMessage);
+begin
+  Memo1.Lines.Add(inttostr(Message.WParam)+': '+string(pchar(Message.LParam)));
+end;
+
+procedure TfrmMain.LMDestroy(var Message: TLMessage);
+begin
+  Memo1.Lines.Add(inttostr(Message.WParam)+': '+string(pchar(Message.LParam)));
+end;
+
+procedure TfrmMain.StartServer;
+begin
+  fDebugDaemon:= TTCPDebugDaemon.Create(Handle);
+end;
+
+procedure TfrmMain.StopServer;
+begin
+  fDebugDaemon.Terminate;
+  fDebugDaemon.WaitFor;
+//  FreeAndNil(fDebugDaemon);
 end;
 
 end.

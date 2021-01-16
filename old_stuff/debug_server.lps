@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="4">
+      <Unit0>
+        <Filename Value="debug_server.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="35"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="lfm_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <CursorPos X="12" Y="10"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="debug_srv.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="71"/>
+        <CursorPos X="40" Y="78"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../bc_rtl/synapse/source/demo/echo/echo.pas"/>
+        <UnitName Value="Echo"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="93"/>
+        <CursorPos Y="99"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit3>
+    </Units>
+    <JumpHistory Count="5" HistoryIndex="4">
+      <Position1>
+        <Filename Value="lfm_main.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="51" Column="20" TopLine="43"/>
+      </Position2>
+      <Position3>
+        <Filename Value="lfm_main.pas"/>
+        <Caret Line="46" Column="28" TopLine="37"/>
+      </Position3>
+      <Position4>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="55" Column="15" TopLine="49"/>
+      </Position4>
+      <Position5>
+        <Filename Value="debug_srv.pas"/>
+        <Caret Line="68" Column="13" TopLine="66"/>
+      </Position5>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
